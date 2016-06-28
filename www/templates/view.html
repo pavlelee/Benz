@@ -1,0 +1,89 @@
+<ion-view>
+  <ion-content>
+    <div class="row">
+      <div class="col col-50 col-offset-25">
+        奔驰
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-50 col-offset-25">
+        {{item.car.name}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-50 col-offset-25">
+        <img ng-src="{{item.car.image}}" style="width: 100%; height: 100%">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-50 col-offset-25">
+        库存：2  运输：1
+      </div>
+    </div>
+
+    <div class="list list-inset">
+
+      <a class="item" href="">
+        <span>裸车价</span>
+        <span class="item-note">
+          {{item.car.price| currency}}
+        </span>
+      </a>
+
+      <a class="item item-icon-right" href="#/schemes">
+        <span>经销商方案</span>
+        <span class="item-note" ng-show="item.schemesCount">
+          {{item.schemesCount| currency}}
+        </span>
+
+        <i class="icon ion-ios-arrow-right"></i>
+
+        <p>
+          <span ng-repeat="value in item.schemes">
+            {{value.text}}
+          </span>
+        </p>
+      </a>
+
+      <a class="item item-icon-right" href="#/gifts">
+        <span>精品升级</span>
+        <span class="item-note" ng-show="item.giftsCount">
+          {{item.giftsCount| currency}}
+        </span>
+
+        <i class="icon ion-ios-arrow-right"></i>
+
+        <p>
+          <span ng-repeat="value in item.gifts">
+            {{value.text}}
+          </span>
+        </p>
+      </a>
+
+      <a class="item item-icon-right" href="#/choose">
+        <span>商业保险</span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+
+      <a class="item item-icon-right" href="#/insurance">
+        <span>金融方案</span>
+        <span class="item-note" ng-show="item.insurance">
+          首付：{{item.insurance.first| currency}} 月供：{{item.insurance.per_month_pay| currency}}
+        </span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+
+      <label class="item item-input">
+        <span class="input-label">现金优惠</span>
+        <input type="text" ng-model="item.preferential" ng-change="reCalculate()">
+      </label>
+
+    </div>
+
+    <a class="button button-positive" href="#/detail">查看报价详细</a>
+
+  </ion-content>
+</ion-view>

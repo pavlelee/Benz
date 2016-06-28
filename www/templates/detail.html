@@ -1,0 +1,132 @@
+<ion-view>
+
+  <ion-tabs class="tabs-striped tabs-top">
+
+    <ion-tab title="报价明细">
+      <ion-nav-view name="tab-tab1">
+        <ion-content>
+          <div class="list">
+
+            <div class="item">
+              裸车价
+              <span class="item-note">
+                {{cart.car.price| currency}}
+              </span>
+            </div>
+
+            <div class="item">
+              <p>
+                经销商方案
+                <span class="item-note">
+                  {{cart.schemesCount| currency}}
+                </span>
+              </p>
+
+              <p class="item-note" ng-repeat="value in cart.schemes">
+                {{value.text}} {{value.price| currency}}
+              </p>
+            </div>
+
+            <div class="item">
+              <p>
+                精品升级
+                <span class="item-note">
+                  {{cart.giftsCount| currency}}
+                </span>
+              </p>
+
+              <p>
+                <span class="item-note" ng-repeat="value in cart.gifts">
+                  {{value.text}} {{value.price| currency}}
+                </span>
+              </p>
+            </div>
+
+            <div class="item">
+              商业保险
+              <span class="item-note">
+                10288
+              </span>
+            </div>
+
+            <div class="item">
+              交强险
+              <span class="item-note">
+                32718
+              </span>
+            </div>
+
+            <div class="item">
+              购置税
+              <span class="item-note">
+                800
+              </span>
+            </div>
+
+            <div class="item">
+              金融服务费
+              <span class="item-note">
+                420
+              </span>
+            </div>
+
+            <div class="item">
+              车船使用税
+              <span class="item-note">
+                950
+              </span>
+            </div>
+
+            <div class="item">
+              上牌费
+              <span class="item-note">
+                420
+              </span>
+            </div>
+
+            <div class="item item-divider">
+              费用总计
+              <span class="item-note">
+                {{cart.count| currency}}
+              </span>
+            </div>
+
+            <div class="item">
+              现金购车款
+              <span class="item-note">
+                {{cart.insurance.first| currency}}
+              </span>
+            </div>
+
+            <div class="item">
+              每月还款
+              <span class="item-note">
+                {{cart.insurance.per_month_pay| currency}}
+              </span>
+            </div>
+
+            <div class="item">
+              还款期
+              <span class="item-note">
+                {{cart.insurance.month}}
+              </span>
+            </div>
+
+          </div>
+        </ion-content>
+
+      </ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="保险明细">
+      <ion-nav-view name="tab-tab1">
+        <ion-content>
+          Tab 2 content
+        </ion-content>
+
+      </ion-nav-view>
+    </ion-tab>
+
+  </ion-tabs>
+
+</ion-view>
