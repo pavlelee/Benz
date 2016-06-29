@@ -38,7 +38,7 @@
             经销商方案
             <span class="item-note" ng-show="item.schemesCount">{{item.schemesCount| currency}}</span>
           </div>
-          <div class="block-quote-footer">
+          <div class="block-quote-footer" ng-show="item.schemesCount">
             <div class="app-badge app-badge-default" ng-repeat="value in item.schemes">
               {{value.text}}
             </div>
@@ -52,7 +52,7 @@
             精品升级
             <span class="item-note" ng-show="item.giftsCount">{{item.giftsCount| currency}}</span>
           </div>
-          <div class="block-quote-footer">
+          <div class="block-quote-footer" ng-show="item.giftsCount">
             <div class="app-badge app-badge-default" ng-repeat="value in item.gifts">
               {{value.text}}
             </div>
