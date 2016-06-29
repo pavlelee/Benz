@@ -1,7 +1,7 @@
 <style>
   .car-detail {
     text-align: center;
-    padding: 25px 10px 18px;
+    padding: 25px 10px 8px;
   }
   .car-name {
     font-size: 15px;
@@ -24,9 +24,12 @@
     font-size: 12px;
     color: #999999;
   }
+  .car-desc span + span {
+    margin-left: 15px;
+  }
 
   .cell {
-    margin: 0 10px;
+    margin: 10px;
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -63,18 +66,113 @@
   .cell-primary + .cell-primary {
     margin-left: 17px;
   }
+
+  .block-quote {
+    position: relative;
+    padding: 0 0 0 10px;
+  }
+  .block-quote + .block-quote {
+    margin-top: 12px;
+  }
+  .block-quote:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #69471a;
+    border-radius: 0 5px 5px 0;
+  }
+  .block-quote-outer {
+    border: 1px solid #8c6015;
+    border-radius: 4px;
+  }
+  .block-quote-inner {
+    position: relative;
+    padding: 8px 14px;
+    font-size: 15px;
+    color: #ffffff;
+  }
+  .block-quote-inner .item-note {
+    color: #999999;
+  }
+  .block-quote-inner .item-note + .item-note {
+    margin-right: 18px;
+  }
+  .block-quote-inner .input-label {
+    padding: 0;
+    font-size: inherit;
+    width: auto;
+  }
+  .block-quote-footer {
+    text-align: right;
+    line-height: 1;
+    padding: 8px 14px;
+  }
+  .block-quote-inner + .block-quote-footer {
+    padding-top: 0;
+  }
+  .block-quote-access {
+    margin-bottom: 25px;
+  }
+  .block-quote-access .block-quote-inner,
+  .block-quote-access .block-quote-footer {
+    padding-right: 30px;
+  }
+  .block-quote-access a.block-quote .block-quote-inner:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    margin-top: -7px;
+    border-left-color: #654617;
+  }
+
+  .app-badge {
+    display: inline-block;
+    min-width: 57px;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 15px;
+    border-radius: 1px;
+    text-align: center;
+    padding: 0 2px;
+  }
+  .app-badge-default {
+    color: #999999;
+    background-color: #654617;
+  }
+  .app-badge + .app-badge {
+    margin-left: 9px;
+  }
+  .button-app {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    min-width: 180px;
+    line-height: 1;
+    padding: 10px;
+    min-height: 40px;
+    border: 1px solid rgba(255,188,78,.37);
+    background-color: rgba(167,109,12,0.2);
+  }
 </style>
 <ion-view>
   <ion-content>
     <div class="car-detail">
       <div class="car-name">{{item.car.name}}</div>
       <div class="car-image"><img ng-src="{{item.car.image}}"></div>
-      <div class="car-desc">库存：2  运输：1</div>
+      <div class="car-desc">
+        <span>库存：2</span>
+        <span>运输：1</span>
+      </div>
     </div>
     <div class="cell">
-      <div class="cell-primary cell-border">
-        <h3>￥：139.98万</h3>
-      </div>
+      <div class="cell-primary cell-border"><h3>￥：139.98万</h3></div>
       <div class="cell-primary cell-border">
         <div class="media-text">
           外观：799钻石白
@@ -86,69 +184,74 @@
         </div>
       </div>
     </div>
-    <div class="list">
 
-      <a class="item" href="">
-        <span>裸车价</span>
-        <span class="item-note">
-          {{item.car.price| currency}}
-        </span>
+    <div class="list block-quote-access">
+      <div class="item block-quote">
+        <div class="block-quote-outer">
+          <div class="block-quote-inner">
+            裸车价
+            <span class="item-note">{{item.car.price| currency}}</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="item block-quote" href="#/schemes">
+        <div class="block-quote-outer">
+          <div class="block-quote-inner">
+            经销商方案
+            <span class="item-note" ng-show="item.schemesCount">{{item.schemesCount| currency}}</span>
+          </div>
+          <div class="block-quote-footer">
+            <div class="app-badge app-badge-default">两轮胎险</div><div class="app-badge app-badge-default">两轮胎险</div>
+          </div>
+        </div>
       </a>
 
-      <a class="item item-icon-right" href="#/schemes">
-        <span>经销商方案</span>
-        <span class="item-note" ng-show="item.schemesCount">
-          {{item.schemesCount| currency}}
-        </span>
-
-        <i class="icon ion-ios-arrow-right"></i>
-
-        <p>
-          <span ng-repeat="value in item.schemes">
-            {{value.text}}
-          </span>
-        </p>
+      <a class="item block-quote" href="#/gifts">
+        <div class="block-quote-outer">
+          <div class="block-quote-inner">
+            精品升级
+            <span class="item-note" ng-show="item.giftsCount">{{item.giftsCount| currency}}</span>
+          </div>
+          <div class="block-quote-footer">
+            <div class="app-badge app-badge-default">两轮胎险</div><div class="app-badge app-badge-default">两轮胎险</div>
+          </div>
+        </div>
       </a>
 
-      <a class="item item-icon-right" href="#/gifts">
-        <span>精品升级</span>
-        <span class="item-note" ng-show="item.giftsCount">
-          {{item.giftsCount| currency}}
-        </span>
-
-        <i class="icon ion-ios-arrow-right"></i>
-
-        <p>
-          <span ng-repeat="value in item.gifts">
-            {{value.text}}
-          </span>
-        </p>
+      <a class="item block-quote" href="#/financial">
+        <div class="block-quote-outer">
+          <div class="block-quote-inner">
+            商业保险
+            <span class="item-note" ng-show="item.financialCount">{{item.financial.name}} {{item.financialCount| currency}}</span>
+          </div>
+        </div>
       </a>
 
-      <a class="item item-icon-right" href="#/financial">
-        <span>商业保险</span>
-        <span class="item-note" ng-show="item.financialCount">
-          {{item.financial.name}} {{item.financialCount| currency}}
-        </span>
-        <i class="icon ion-ios-arrow-right"></i>
+      <a class="item block-quote" href="#/insurance">
+        <div class="block-quote-outer">
+          <div class="block-quote-inner">
+            金融方案
+            <span class="item-note" >月供：{{item.insurance.per_month_pay| currency}}</span>
+            <span class="item-note" >首付：{{item.insurance.first| currency}}</span>
+          </div>
+        </div>
       </a>
 
-      <a class="item item-icon-right" href="#/insurance">
-        <span>金融方案</span>
-        <span class="item-note" ng-show="item.insurance">
-          首付：{{item.insurance.first| currency}} 月供：{{item.insurance.per_month_pay| currency}}
-        </span>
-        <i class="icon ion-ios-arrow-right"></i>
-      </a>
-
-      <label class="item item-input">
-        <span class="input-label">现金优惠</span>
-        <input type="text" ng-model="item.preferential" ng-change="reCalculate()">
-      </label>
-
+      <div class="item block-quote">
+        <div class="block-quote-outer">
+          <div class="block-quote-inner">
+            现金优惠
+            <span class="item-note input-label">￥0</span>
+            <input type="hidden" ng-model="item.preferential" ng-change="reCalculate()">
+          </div>
+        </div>
+      </div>
     </div>
 
-    <a class="button button-positive" href="#/detail">查看报价详细</a>
+    <div class="text-center">
+      <a class="button button-app" href="#/detail">查看报价详细</a>
+    </div>
 
   </ion-content>
 </ion-view>
