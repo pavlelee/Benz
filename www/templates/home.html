@@ -13,14 +13,14 @@
             </div>
           </div>
           <div class="media-box-bd media-box-primary">
-            <div class="parallelogram">￥：{{item.price}}</div>
+            <div class="parallelogram">{{item.badge_price}}</div>
             <div class="media-text">
               内饰：{{item.interior}}
               <span class="color-point" style="background-color: red;"></span>
             </div>
           </div>
           <div class="media-box-ft">
-            <div class="circle">2</div>
+            <div class="circle">{{item.in_stock + item.on_stock}}</div>
           </div>
         </div>
       </ion-item>
