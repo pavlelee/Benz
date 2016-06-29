@@ -77,7 +77,8 @@ div.item-note { color: #ffffff;}
 .block-quote { display: block; position: relative; padding: 0 0 0 10px;}
 .block-quote + .block-quote { margin-top: 12px;}
 .block-quote:before { content: ''; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background-color: #69471a; border-radius: 0 5px 5px 0;}
-.block-quote-outer { display: block; border: 1px solid #8c6015; border-radius: 4px;}
+.block-quote-outer { display: block; outline: 0; position: relative;}
+.block-quote-outer:before { content: ''; position: absolute; top: 0; left: 0; border: 1px solid #8c6015; border-radius: 8px; width: 200%; height: 200%; -webkit-transform: scale(0.5); transform: scale(0.5); -webkit-transform-origin: 0 0; transform-origin: 0 0; box-sizing: border-box;}
 .block-quote-inner { position: relative; padding: 8px 14px; font-size: 15px; color: #ffffff;}
 .block-quote-inner .item-note { color: #999999;}
 .block-quote-inner .item-note + .item-note { margin-right: 15px;}
@@ -132,6 +133,8 @@ a.block-quote.activated { background: transparent;}
 .list-head-sub { margin-bottom: 15px;}
 .range input { background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #A76D0C), color-stop(100%, #A76D0C)); background: linear-gradient(to right, #A76D0C 0%, #A76D0C 100%); background-position: center; background-size: 99% 1px; background-repeat: no-repeat; -webkit-appearance: none; margin: 0 10px 0 0;}
 .range input::-webkit-slider-thumb { -webkit-appearance: none; cursor: default; height: 25px; width: 25px; background: url(/img/range_point.png) center center; background-size: 25px 25px; overflow: visible;}
+.range input::-webkit-slider-thumb:before { background: #0E0E0E; height: 1px; top: 12px; left: 20px; }
+.range input::-ms-fill-lower { background: #0E0E0E; height: 1px;}
 .margin-top-lg { margin-top: 35px;}
 
 /* schemes */
