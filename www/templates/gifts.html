@@ -4,15 +4,16 @@
     <div class="list list-inset">
 
       <div class="item">
-        <ion-checkbox ng-repeat="item in list" ng-model="item.checked">
+        <ion-checkbox ng-repeat="item in list" ng-model="item.checked" ng-change="addGifts()">
           {{item.text}}   {{item.price| currency}}
         </ion-checkbox>
       </div>
 
-      小计：{{cart.giftsCount}}
     </div>
 
-    <button class="button button-block button-positive" ng-click="addGifts()">确定</button>
+    小计：{{cart.giftsCount| currency}}
+
+    <button class="button button-block button-positive" ng-click="goBack()">确定</button>
 
   </ion-content>
 </ion-view>

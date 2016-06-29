@@ -125,8 +125,11 @@
         </p>
       </a>
 
-      <a class="item item-icon-right" href="#/choose">
+      <a class="item item-icon-right" href="#/financial">
         <span>商业保险</span>
+        <span class="item-note" ng-show="item.financialCount">
+          {{item.financial.name}} {{item.financialCount| currency}}
+        </span>
         <i class="icon ion-ios-arrow-right"></i>
       </a>
 

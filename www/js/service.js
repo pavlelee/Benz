@@ -38,7 +38,11 @@ angular.module('starter.services', [])
     "gifts": [],
     "giftsCount": 0,
     "insurance": null,
-    "financial": null,
+    "financial": {
+      "name": "平安车险",
+      "items": {}
+    },
+    "financialCount": 0,
     "count": 0,
     "preferential": 0
   };
@@ -53,20 +57,22 @@ angular.module('starter.services', [])
 
   /**
    * 添加经销商方案
+   * @param id
    * @param val
    */
-  this.addScheme = function(val){
+  this.addScheme = function(id, val){
     this.cart.schemesCount = parseInt(this.cart.schemesCount) + parseInt(val.price);
-    this.cart.schemes.push(val);
+    this.cart.schemes[id] = val;
   };
 
   /**
    * 添加精品选配
+   * @param id
    * @param val
    */
-  this.addGift = function(val){
+  this.addGift = function(id, val){
     this.cart.giftsCount = parseInt(this.cart.giftsCount) + parseInt(val.price);
-    this.cart.gifts.push(val);
+    this.cart.gifts[id] = val;
   };
 
   /**
@@ -107,5 +113,21 @@ angular.module('starter.services', [])
     if(this.cart.preferential){
       this.cart.count -= parseInt(this.cart.preferential);
     }
+  };
+
+  /**
+   * 获取保险
+   * @returns {Promise}
+   */
+  this.getFinancial = function () {
+    var defer = $q.defer();
+
+    $http.get('/data/financials.json').success(function(results) {
+      defer.resolve(results);
+    }).error(function(error) {
+      defer.reject('获取数据失败：'+ error);
+    });
+
+    return defer.promise;
   }
 });
