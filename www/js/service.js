@@ -38,7 +38,11 @@ angular.module('starter.services', [])
     "gifts": [],
     "giftsCount": 0,
     "insurance": null,
-    "financial": null,
+    "financial": {
+      "name": "平安车险",
+      "items": {}
+    },
+    "financialCount": 0,
     "count": 0,
     "preferential": 0
   };
@@ -109,5 +113,21 @@ angular.module('starter.services', [])
     if(this.cart.preferential){
       this.cart.count -= parseInt(this.cart.preferential);
     }
+  };
+
+  /**
+   * 获取保险
+   * @returns {Promise}
+   */
+  this.getFinancial = function () {
+    var defer = $q.defer();
+
+    $http.get('/data/financials.json').success(function(results) {
+      defer.resolve(results);
+    }).error(function(error) {
+      defer.reject('获取数据失败：'+ error);
+    });
+
+    return defer.promise;
   }
 });

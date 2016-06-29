@@ -108,6 +108,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         controller: 'DetailCtrl'
       }
     }
+  })
+  .state('financial', {
+    url: '/financial',
+    views: {
+      'main': {
+        templateUrl: 'templates/financial.html',
+        controller: 'FinancialCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback

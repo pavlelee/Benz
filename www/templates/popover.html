@@ -1,0 +1,10 @@
+<ion-popover-view>
+  <ion-header-bar>
+    <h1 class="title">{{title}}</h1>
+  </ion-header-bar>
+  <ion-content>
+    <ion-radio ng-value="'A'" ng-repeat="value in check.popover" ng-click="checkBadge(check, value)">
+      {{value.badge}} {{value.price| currency}}
+    </ion-radio>
+  </ion-content>
+</ion-popover-view>

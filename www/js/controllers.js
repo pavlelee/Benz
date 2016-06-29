@@ -139,4 +139,81 @@ angular.module('starter.controllers', [])
     console.log(cartService.cart);
     $ionicHistory.goBack();
   }
+})
+
+.controller('FinancialCtrl', function($scope, cartService, $ionicPopover, $ionicHistory) {
+  $scope.cart = cartService.cart;
+  $scope.data = [];
+
+  cartService.getFinancial().then(function (result) {
+    $scope.data = result;
+    $scope.init();
+  });
+  
+  $scope.init = function () {
+    if(!$scope.isEmptyObject($scope.cart.financial.items)){
+      angular.forEach($scope.cart.financial.items, function(value, key) {
+        $scope.data.items[key].checked = true;
+      });
+    }else{
+      angular.forEach($scope.data.items, function(value) {
+        value.checked = true;
+      });
+    }
+
+    $scope.checkItem();
+  };
+
+  $scope.checkItem = function () {
+    $scope.cart.financialCount = 0;
+    $scope.cart.financial.items = {};
+    angular.forEach($scope.data.items, function(value, key) {
+      if(value.checked == true){
+        $scope.cart.financial.items[key] = {
+          "text": value.text,
+          "price": value.price,
+          "badge": value.badge
+        };
+
+        $scope.cart.financialCount = parseInt($scope.cart.financialCount) + parseInt(value.price);
+      }
+    });
+
+    console.log($scope.cart);
+  };
+
+  $scope.isEmptyObject = function (obj){
+    for(var n in obj){
+      return false
+    }
+
+    return true;
+  };
+
+  $ionicPopover.fromTemplateUrl('templates/popover.html', {
+    scope: $scope
+  }).then(function(popover) {
+    $scope.popover = popover;
+  });
+
+  $scope.openPopover = function($event, value) {
+    $scope.check = value;
+    $scope.popover.show($event);
+  };
+
+  $scope.closePopover = function() {
+    $scope.popover.hide();
+  };
+
+  $scope.checkBadge = function (value, popover) {
+    value.badge = popover.badge;
+    value.price = popover.price;
+
+    $scope.checkItem();
+    $scope.closePopover();
+  };
+
+  $scope.goBack = function () {
+    $ionicHistory.goBack();
+  };
 });
