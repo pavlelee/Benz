@@ -33,16 +33,60 @@ angular.module('starter.services', [])
 .service('cartService', function ($q, $http) {
   this.cart = {
     "car": null,
-    "schemes": [],
-    "schemesCount": 0,
-    "gifts": [],
-    "giftsCount": 0,
+    "schemes": {
+      1: {text: "延保两年", price: 600000, checked: true}
+    },
+    "schemesCount": 600000,
+    "gifts": {
+      1: {text: "3M 贴膜", price: 388800, checked: true},
+    },
+    "giftsCount": 388800,
     "insurance": null,
     "financial": {
       "name": "平安车险",
-      "items": {}
+      "items": {
+        "1": {
+          "text": "第三者责任险",
+          "badge": "50万",
+          "price": "125200",
+        },
+        "2": {
+          "text": "车辆损失险",
+          "price": "462400"
+        },
+        "3": {
+          "text": "全车盗抢险",
+          "price": "182700"
+        },
+        "4": {
+          "text": "玻璃单独破损险",
+          "price": "95700",
+          "badge": "进口",
+        },
+        "5": {
+          "text": "自然损失险",
+          "price": "57400"
+        },
+        "6": {
+          "text": "不计免赔特约险",
+          "price": "125100"
+        },
+        "7": {
+          "text": "无过责任险",
+          "price": "32600"
+        },
+        "8": {
+          "text": "车上人员责任险",
+          "price": "20000"
+        },
+        "9": {
+          "text": "车身划痕险",
+          "price": "58500",
+          "badge": "2千",
+        }
+      }
     },
-    "financialCount": 0,
+    "financialCount": 1159600,
     "count": 0,
     "preferential": "",
     "shangye": 1028800,
