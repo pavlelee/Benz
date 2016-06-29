@@ -1,25 +1,24 @@
+<style>
+  .list-striped .item:nth-child(2n-1) { background-color: rgba(83,83,83,.4);}
+  .item-last { background-color: rgba(243,154,0,.4);}
+  .item-last-sub { background-color: rgba(243,154,0,.1);}
+</style>
 <ion-view>
-
   <ion-tabs class="tabs-striped tabs-top">
 
     <ion-tab title="报价明细">
       <ion-nav-view name="tab-tab1">
         <ion-content>
-          <div class="list">
+          <div class="list list-striped">
 
-            <div class="item">
-              裸车价
-              <span class="item-note">
-                {{cart.car.price| currency}}
-              </span>
-            </div>
+            <div class="item">裸车价<div class="item-note">{{cart.car.price| currency}}</div></div>
 
             <div class="item" ng-show="cart.schemesCount">
               <p>
                 经销商方案
-                <span class="item-note">
+                <div class="item-note">
                   {{cart.schemesCount| currency}}
-                </span>
+                </div>
               </p>
 
               <p class="item-note" ng-repeat="value in cart.schemes">
@@ -30,9 +29,9 @@
             <div class="item" ng-show="cart.giftsCount">
               <p>
                 精品升级
-                <span class="item-note">
+                <div class="item-note">
                   {{cart.giftsCount| currency}}
-                </span>
+                </div>
               </p>
 
               <p>
@@ -44,72 +43,72 @@
 
             <div class="item">
               商业保险
-              <span class="item-note">
+              <div class="item-note">
                 {{cart.shangye| currency}}
-              </span>
+              </div>
             </div>
 
             <div class="item">
               交强险
-              <span class="item-note">
+              <div class="item-note">
                 {{cart.jiaoqiang| currency}}
-              </span>
+              </div>
             </div>
 
             <div class="item">
               购置税
-              <span class="item-note">
+              <div class="item-note">
                 {{cart.gouzhi| currency}}
-              </span>
+              </div>
             </div>
 
             <div class="item">
               金融服务费
-              <span class="item-note">
+              <div class="item-note">
                 {{cart.service| currency}}
-              </span>
+              </div>
             </div>
 
             <div class="item">
               车船使用税
-              <span class="item-note">
+              <div class="item-note">
                 {{cart.chechuan| currency}}
-              </span>
+              </div>
             </div>
 
             <div class="item">
               上牌费
-              <span class="item-note">
+              <div class="item-note">
                 {{cart.shangpai| currency}}
-              </span>
+              </div>
             </div>
 
-            <div class="item item-divider">
+            <div class="item item-last">
               费用总计
-              <span class="item-note">
+              <div class="item-note">
                 {{cart.count| currency}}
-              </span>
+              </div>
             </div>
 
-            <div class="item" ng-show="cart.insurance.first">
+            <div class="item item-last-sub" ng-show="cart.insurance.first">
               现金购车款
-              <span class="item-note">
+              <div class="item-note">
                 {{cart.insurance.first| currency}}
-              </span>
+              </div>
             </div>
 
-            <div class="item" ng-show="cart.insurance.per_month_pay">
+            <div class="item item-last-sub" ng-show="cart.insurance.per_month_pay">
               每月还款
-              <span class="item-note">
+              <div class="item-note">
                 {{cart.insurance.per_month_pay| currency}}
-              </span>
+              </div>
             </div>
 
-            <div class="item" ng-show="cart.insurance.month">
+            <div class="item item-last-sub" ng-show="cart.insurance.month">
               还款期
-              <span class="item-note">
+              <div class="item-note">
                 {{cart.insurance.month}}
-              </span>
+              </div>
             </div>
 
           </div>
