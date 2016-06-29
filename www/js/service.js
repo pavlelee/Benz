@@ -44,7 +44,13 @@ angular.module('starter.services', [])
     },
     "financialCount": 0,
     "count": 0,
-    "preferential": 0
+    "preferential": 0,
+    "shangye": 1028800,
+    "jiaoqiang": 3271800,
+    "gouzhi": 80000,
+    "service": 42000,
+    "chechuan": 95000,
+    "shangpai": 42000
   };
 
   /**
@@ -85,14 +91,6 @@ angular.module('starter.services', [])
   };
 
   /**
-   * 设置金融方案
-   * @param val
-   */
-  this.setFinancial = function(val){
-    this.cart.financial = val;
-  };
-
-  /**
    * 重新计算
    */
   this.reCalculate = function () {
@@ -111,8 +109,15 @@ angular.module('starter.services', [])
     }
 
     if(this.cart.preferential){
-      this.cart.count -= parseInt(this.cart.preferential);
+      this.cart.count -= parseInt(this.cart.preferential) * 100;
     }
+
+    this.cart.count += parseInt(this.cart.shangye);
+    this.cart.count += parseInt(this.cart.jiaoqiang);
+    this.cart.count += parseInt(this.cart.gouzhi);
+    this.cart.count += parseInt(this.cart.service);
+    this.cart.count += parseInt(this.cart.chechuan);
+    this.cart.count += parseInt(this.cart.shangpai);
   };
 
   /**
