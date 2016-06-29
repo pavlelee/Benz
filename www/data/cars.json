@@ -1,7 +1,7 @@
 {
   "1": {
     "id": "1",
-    "image": "http://a4.att.hudong.com/65/41/01300000432220140722411701583.jpg",
+    "image": "/img/car/01.png",
     "name": "C200轿跑",
     "price": "38280000",
     "badge_price": "￥：139.98万",
@@ -14,7 +14,7 @@
   },
   "2": {
     "id": "2",
-    "image": "/img/car/01.png",
+    "image": "/img/car/02.png",
     "name": "C200轿跑",
     "price": "79980000",
     "badge_price": "￥：79.98万",
@@ -27,7 +27,7 @@
   },
   "3": {
     "id": "3",
-    "image": "http://a4.att.hudong.com/65/41/01300000432220140722411701583.jpg",
+    "image": "/img/car/03.png",
     "name": "C200轿跑",
     "price": "79980000",
     "badge_price": "￥：139.98万",
@@ -40,7 +40,7 @@
   },
   "4": {
     "id": "4",
-    "image": "/img/car/01.png",
+    "image": "/img/car/04.png",
     "name": "C200轿跑",
     "price": "38280000",
     "badge_price": "￥：79.98万",
@@ -53,7 +53,7 @@
   },
   "5": {
     "id": "5",
-    "image": "http://a4.att.hudong.com/65/41/01300000432220140722411701583.jpg",
+    "image": "/img/car/05.png",
     "name": "C200轿跑",
     "price": "38280000",
     "badge_price": "￥：139.98万",
@@ -66,7 +66,7 @@
   },
   "6": {
     "id": "6",
-    "image": "/img/car/01.png",
+    "image": "/img/car/06.png",
     "name": "C200轿跑",
     "price": "79980000",
     "badge_price": "￥：79.98万",

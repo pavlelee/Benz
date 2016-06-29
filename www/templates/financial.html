@@ -1,32 +1,33 @@
 <ion-view>
   <ion-content>
 
-    <label class="item item-input item-select">
-      <div class="input-label">
-        保险公司
+    <div class="list">
+      <div class="item block-quote">
+        <label class="block-quote-outer" for="select">
+          <div class="block-quote-inner app-select">
+            <select  ng-model="cart.financial.name" id="select">
+              <option ng-repeat="val in data.names">{{val}}</option>
+            </select>
+          </div>
+        </label>
       </div>
-      <select ng-model="cart.financial.name">
-        <option ng-repeat="val in data.names">{{val}}</option>
-      </select>
-    </label>
-
-    <div class="item" ng-repeat="value in data.items">
-      <ion-checkbox ng-model="value.checked" ng-change="checkItem()">
-        {{value.text}}
-      </ion-checkbox>
-      <a class="item-note"
-         ng-show="value.text == '第三者责任险' || value.text == '玻璃单独破损险' || value.text == '车身划痕险'"
-         ng-click="openPopover($event, value)"
-      >
-        {{value.price| currency}}
-        <i class="icon icon-right ion-ios-arrow-right"></i>
-      </a>
-      <span class="item-note" ng-show="!(value.text == '第三者责任险' || value.text == '玻璃单独破损险' || value.text == '车身划痕险')">
-        {{value.price| currency}}
-      </span>
     </div>
 
-    <button class="button button-block button-positive" ng-click="goBack()">确定</button>
+    <div class="cells cells-access cells-checkbox">
+      <label class="cell" ng-repeat="value in data.items">
+        <div class="cell-hd">
+          <input type="checkbox" class="app-check" ng-model="value.checked" ng-change="checkItem()">
+          <i class="icon-checked"></i>
+        </div>
+        <div class="cell-bd cell-primary">{{value.text}}</div>
+        <a class="cell-ft" ng-show="value.text == '第三者责任险' || value.text == '玻璃单独破损险' || value.text == '车身划痕险'" ng-click="openPopover($event, value)">{{value.price| currency}}</a>
+        <div class="cell-ft"  ng-show="!(value.text == '第三者责任险' || value.text == '玻璃单独破损险' || value.text == '车身划痕险')">{{value.price| currency}}</div>
+      </label>
+    </div>
 
   </ion-content>
+  <div class="fixed-bottom">
+    <div class="bottom-main">保险合计</div>
+    <button class="button button-app" type="button" ng-click="goBack()">确定</button>
+  </div>
 </ion-view>

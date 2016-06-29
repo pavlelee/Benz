@@ -1,19 +1,38 @@
 <ion-view>
   <ion-content>
 
-    <div class="list list-inset">
+    <div class="list-head">精品升级</div>
+    <div class="list">
 
-      <div class="item">
-        <ion-checkbox ng-repeat="item in list" ng-model="item.checked" ng-change="addGifts()">
-          {{item.text}}   {{item.price| currency}}
-        </ion-checkbox>
+      <div class="item block-quote">
+        <div class="block-quote-outer">
+          <div class="block-quote-inner">
+            <div class="cells-title">选择精品升级</div>
+
+            <div class="cells-checkbox">
+
+              <label class="cell" ng-repeat="item in list" ng-model="item.checked" ng-change="addGifts()">
+                <div class="cell-hd">
+                  <input type="checkbox" class="app-check" ng-model="value.checked" ng-change="checkItem()">
+                  <i class="icon-checked"></i>
+                </div>
+                <div class="cell-bd cell-primary">{{item.text}} </div>
+                <div class="cell-hd">{{item.price| currency}}</div>
+              </label>
+
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
+    <div class="list-footer">
+      小计：{{cart.giftsCount| currency}}
+    </div>
 
-    小计：{{cart.giftsCount| currency}}
-
-    <button class="button button-block button-positive" ng-click="goBack()">确定</button>
+    <div class="text-center margin-top-xl">
+      <button class="button button-app" ng-click="goBack()">确定</button>
+    </div>
 
   </ion-content>
 </ion-view>

@@ -1,39 +1,52 @@
 <ion-view>
   <ion-content>
 
-    <div class="list list-inset">
-
-      <div class="item">
-        <span>可贷款总价</span>
-        <span class="item-note">
-          {{cart.car.price| currency}}
-        </span>
+    <div class="list-head">金融方案</div>
+    <div class="list-head-sub">
+      <div class="parallelogram">奔驰金融方案名称</div>
+      <div class="content">
+        <span>利率:<dfn>3.99%</dfn></span>
+        <span>还款期:<dfn>36</dfn>个月</span>
       </div>
+    </div>
+    <div class="list">
 
-      <div class="item">
-        <p>
-          <span>首付</span>
-          <span class="item-note">
-            {{insurance.first| currency}}
-          </span>
-        </p>
-
-        <div class="item range">
-          <input type="range" name="volume" ng-model="insurance.scale" min="50" max="100" ng-change="changeScale()">
-          {{insurance.scale}}%
+      <div class="item block-quote">
+        <div class="block-quote-outer">
+          <div class="block-quote-inner">
+            可贷款总价
+            <span class="item-note">{{cart.car.price| currency}}</span>
+          </div>
         </div>
       </div>
 
-      <div class="item">
-        <span>每月还款</span>
-        <span class="item-note">
-          {{insurance.per_month_pay| currency}}
-        </span>
+      <div class="item block-quote">
+        <div class="block-quote-outer">
+          <div class="block-quote-inner">
+            首付
+            <span class="item-note">{{insurance.first| currency}}</span>
+          </div>
+          <div class="range">
+            <input type="range" name="volume" ng-model="insurance.scale" min="50" max="100" ng-change="changeScale()">
+            {{insurance.scale}}%
+          </div>
+        </div>
+      </div>
+
+      <div class="item block-quote">
+        <div class="block-quote-outer">
+          <div class="block-quote-inner">
+            每月还款
+            <span class="item-note">{{insurance.per_month_pay| currency}}</span>
+          </div>
+        </div>
       </div>
 
     </div>
 
-    <button class="button button-block button-positive" ng-click="setInsurance()">确定</button>
+    <div class="text-center margin-top-lg">
+      <button class="button button-app" ng-click="setInsurance()">确定</button>
+    </div>
 
   </ion-content>
 </ion-view>
