@@ -19,7 +19,7 @@ angular.module('starter.filters', [])
       s = s.replace(re, "$1,$2");
     }
 
-    s = s.replace(/,(\d\d)$/, ".$1");
+    s = s.replace(/(\d*),(\d\d)$/, "$1");
     return '¥' + s.replace(/^\./, "0.");
   };
 }]);
