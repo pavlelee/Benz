@@ -3,11 +3,13 @@
 	background-size: 100% auto;
 }
 .scroll-content {
+	background: url(../img/BG.png) no-repeat fixed top center;
+	background-size: 100% auto;
 	padding-top: 50px;
 	color: #AAA;
 }
-.tab-content .scroll-content{
-	padding-top: 0;
+.pane {
+	background: none;
 }
 .list-title {
 	font-size: 15px;
@@ -132,4 +134,51 @@
 	border: 1px dotted #A76D0C;
 	border-radius: 50%;
 	text-align: center;
+}
+
+/* 报价明细 */
+.tab-content .scroll-content{
+	padding-top: 0;
+}
+.tabs-striped .tabs {
+	background: transparent;
+	border: none;
+	padding: 0 10px;
+}
+.tabs-top.tabs-striped .tab-item {
+	font-size: 15px;
+	color: #666666;
+	position: relative;
+	border-width: 0;
+	overflow: visible;
+	max-width: 100%;
+}
+.tabs-top.tabs-striped .tab-item:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	border: 1px solid #936a18;
+	-webkit-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+.tabs-top.tabs-striped .tab-item.tab-item-active,
+.tabs-top.tabs-striped .tab-item.activated {
+	margin-top: 1px;
+	color: #ffffff;
+	border-width: 0!important;
+}
+.tabs-top.tabs-striped .tab-item.tab-item-active:after {
+	height: 3px;
+	border: 3px solid #936a18;
+}
+.tabs-top.tabs-striped .tab-item.tab-item-active.activated:after {
+	bottom: 0;
+}
+.tabs-top.tabs-striped .tab-item.activated:after {
+	bottom: 1px;
 }
