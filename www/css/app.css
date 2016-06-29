@@ -1,5 +1,5 @@
-.view-container { background: url(../img/BG.png) no-repeat fixed top center; background-size: 375px auto;}
-.scroll-content { background: url(../img/BG.png) no-repeat fixed top center; background-size: 375px auto; padding-top: 60px; color: #AAA;}
+.view-container { background: url(../img/BG.png) no-repeat fixed top center; background-size: 100% auto;}
+.scroll-content { background: url(../img/BG.png) no-repeat fixed top center; background-size: 100% auto; padding-top: 60px; color: #AAA;}
 .pane { background: none;}
 .list-title { font-size: 15px; line-height: 40px; margin: 0 10px; text-align: center; color: #fff; background: url(../img/list_title_bg.png); background-size: 100% 100%;}
 .list { margin: 0 10px;}
