@@ -79,14 +79,16 @@
         </div>
       </a>
 
-      <div class="item block-quote">
+      <label class="item block-quote" for="input-label">
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             现金优惠
-            <input type="text" class="item-note input-label" ng-model="item.preferential" ng-change="reCalculate()">
+            <span class="item-note">
+              <input type="text" class="app-input" ng-model="item.preferential" ng-change="reCalculate()" id="input-label" placeholder="请输入金额">
+            </span>
           </div>
         </div>
-      </div>
+      </label>
     </div>
 
     <div class="text-center">
