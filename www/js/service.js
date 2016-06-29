@@ -44,7 +44,7 @@ angular.module('starter.services', [])
     },
     "financialCount": 0,
     "count": 0,
-    "preferential": 0,
+    "preferential": "",
     "shangye": 1028800,
     "jiaoqiang": 3271800,
     "gouzhi": 80000,
