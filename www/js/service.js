@@ -53,20 +53,22 @@ angular.module('starter.services', [])
 
   /**
    * 添加经销商方案
+   * @param id
    * @param val
    */
-  this.addScheme = function(val){
+  this.addScheme = function(id, val){
     this.cart.schemesCount = parseInt(this.cart.schemesCount) + parseInt(val.price);
-    this.cart.schemes.push(val);
+    this.cart.schemes[id] = val;
   };
 
   /**
    * 添加精品选配
+   * @param id
    * @param val
    */
-  this.addGift = function(val){
+  this.addGift = function(id, val){
     this.cart.giftsCount = parseInt(this.cart.giftsCount) + parseInt(val.price);
-    this.cart.gifts.push(val);
+    this.cart.gifts[id] = val;
   };
 
   /**

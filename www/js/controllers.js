@@ -31,47 +31,69 @@ angular.module('starter.controllers', [])
 .controller('SchemesCtrl', function($scope, cartService, $ionicHistory) {
   $scope.cart = cartService.cart;
 
-  $scope.list = [
-    { text: "延保两年", price: 6000, checked: true },
-    { text: "两年轮胎险", price: 1888, checked: false }
-  ];
+  $scope.list = {
+    1: {text: "延保两年", price: 6000, checked: true},
+    2: {text: "两年轮胎险", price: 1888, checked: false}
+  };
+
+  angular.forEach($scope.list, function(value, key) {
+    if($scope.cart.schemes[key] && $scope.cart.schemes[key].checked == true){
+      $scope.list[key].checked = true;
+    }
+  });
 
   $scope.addScheme = function () {
     cartService.cart.schemes = [];
     cartService.cart.schemesCount = 0;
-    angular.forEach($scope.list, function(value) {
+    angular.forEach($scope.list, function(value, key) {
       if(value.checked == true){
-        cartService.addScheme(value);
+        cartService.addScheme(key, value);
       }
     });
 
     console.log(cartService.cart);
     cartService.reCalculate();
+  };
+
+  $scope.goBack = function () {
     $ionicHistory.goBack();
-  }
+  };
+
+  $scope.addScheme();
 })
 
 .controller('GiftsCtrl', function($scope, cartService, $ionicHistory) {
   $scope.cart = cartService.cart;
 
-  $scope.list = [
-    { text: "3M 贴膜", price: 3888, checked: true },
-    { text: "凯立德地图导航", price: 3000, checked: false }
-  ];
+  $scope.list = {
+    1: {text: "3M 贴膜", price: 3888, checked: true},
+    2: {text: "凯立德地图导航", price: 3000, checked: false}
+  };
+
+  angular.forEach($scope.list, function(value, key) {
+    if($scope.cart.gifts[key] && $scope.cart.gifts[key].checked == true){
+      $scope.list[key].checked = true;
+    }
+  });
 
   $scope.addGifts = function () {
     cartService.cart.gifts = [];
     cartService.cart.giftsCount = 0;
-    angular.forEach($scope.list, function(value) {
+    angular.forEach($scope.list, function(value, key) {
       if(value.checked == true){
-        cartService.addGift(value);
+        cartService.addGift(key, value);
       }
     });
 
     console.log(cartService.cart);
     cartService.reCalculate();
+  };
+
+  $scope.goBack = function () {
     $ionicHistory.goBack();
-  }
+  };
+
+  $scope.addGifts();
 })
 
 .controller('InsuranceCtrl', function($scope, cartService, $ionicHistory) {
