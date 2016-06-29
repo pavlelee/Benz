@@ -15,7 +15,7 @@
               </div>
             </div>
 
-            <div class="item item-complex" ng-show="cart.schemesCount">
+            <div class="item item-complex" ng-if="cart.schemesCount">
               <div class="item-main">
                 经销商方案
                 <div class="item-note">
@@ -30,7 +30,7 @@
               </div>
             </div>
 
-            <div class="item item-complex" ng-show="cart.giftsCount">
+            <div class="item item-complex" ng-if="cart.giftsCount">
               <div class="item-main">
                 精品升级<div class="item-note">{{cart.giftsCount| currency}}</div>
               </div>
@@ -55,58 +55,74 @@
             </div>
 
             <div class="item item-complex">
-              购置税
-              <div class="item-note">
-                {{cart.gouzhi| currency}}
+              <div class="item-main">
+                购置税
+                <div class="item-note">
+                  {{cart.gouzhi| currency}}
+                </div>
               </div>
             </div>
 
             <div class="item item-complex">
-              金融服务费
-              <div class="item-note">
-                {{cart.service| currency}}
+              <div class="item-main">
+                金融服务费
+                <div class="item-note">
+                  {{cart.service| currency}}
+                </div>
               </div>
             </div>
 
             <div class="item item-complex">
-              车船使用税
-              <div class="item-note">
-                {{cart.chechuan| currency}}
+              <div class="item-main">
+                车船使用税
+                <div class="item-note">
+                  {{cart.chechuan| currency}}
+                </div>
               </div>
             </div>
 
             <div class="item item-complex">
-              上牌费
-              <div class="item-note">
-                {{cart.shangpai| currency}}
+              <div class="item-main">
+                上牌费
+                <div class="item-note">
+                  {{cart.shangpai| currency}}
+                </div>
               </div>
             </div>
 
             <div class="item item-complex item-last">
-              费用总计
-              <div class="item-note">
-                {{cart.count| currency}}
+              <div class="item-main">
+                费用总计
+                <div class="item-note">
+                  {{cart.count| currency}}
+                </div>
               </div>
             </div>
 
             <div class="item item-complex item-last-sub" ng-show="cart.insurance.first">
-              现金购车款
-              <div class="item-note">
-                {{cart.insurance.first| currency}}
+              <div class="item-main">
+                现金购车款
+                <div class="item-note">
+                  {{cart.insurance.first| currency}}
+                </div>
               </div>
             </div>
 
             <div class="item item-complex item-last-sub" ng-show="cart.insurance.per_month_pay">
-              每月还款
-              <div class="item-note">
-                {{cart.insurance.per_month_pay| currency}}
+              <div class="item-main">
+                每月还款
+                <div class="item-note">
+                  {{cart.insurance.per_month_pay| currency}}
+                </div>
               </div>
             </div>
 
             <div class="item item-complex item-last-sub" ng-show="cart.insurance.month">
-              还款期
-              <div class="item-note">
-                {{cart.insurance.month}}
+              <div class="item-main">
+                还款期
+                <div class="item-note">
+                  {{cart.insurance.month}}
+                </div>
               </div>
             </div>
 
