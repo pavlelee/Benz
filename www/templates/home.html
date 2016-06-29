@@ -1,22 +1,28 @@
 <ion-view>
   <ion-content>
-    <div class="row">
-      <div class="col col-50 col-offset-25">
-        奔驰
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col col-50 col-offset-25">
-        2016款C200轿跑
-      </div>
-    </div>
-
+    <div class="list-title">2016款C200轿跑</div>
     <ion-list>
-      <ion-item class="item item-thumbnail-left" ng-repeat="item in items" href="#/view/{{item.id}}">
-        <img ng-src="{{item.image}}">
-        <h2>{{item.name}}  ${{item.price}}</h2>
-        <p>外观：{{item.exterior}} 内饰：{{item.interior}}</p>
+      <ion-item ng-repeat="item in items" href="#/view/{{item.id}}">
+        <div class="media-box">
+          <div class="media-box-hd"><img ng-src="{{item.image}}"></div>
+          <div class="media-box-bd media-box-primary">
+            <div class="media-title">{{item.name}}</div>
+            <div class="media-text">
+              外观：{{item.exterior}}
+              <span class="color-point" style="background-color: red;"></span>
+            </div>
+          </div>
+          <div class="media-box-bd media-box-primary">
+            <div class="parallelogram">￥：{{item.price}}</div>
+            <div class="media-text">
+              内饰：{{item.interior}}
+              <span class="color-point" style="background-color: red;"></span>
+            </div>
+          </div>
+          <div class="media-box-ft">
+            <div class="circle">2</div>
+          </div>
+        </div>
       </ion-item>
     </ion-list>
   </ion-content>
