@@ -21,7 +21,7 @@
 
 .view-container { background: url(../img/BG.png) no-repeat fixed top center; background-size: 100% auto;}
 .scroll-content { background: url(../img/BG.png) no-repeat fixed top center; background-size: 100% auto; padding-top: 60px; }
-/*.pane { background: url(../img/BG.png) no-repeat fixed top center; background-size: 100% auto; color: #AAA; top: 60px;}*/
+.pane { background: url(../img/BG.png) no-repeat fixed top center; background-size: 100% auto; }
 .list-title { font-size: 15px; line-height: 40px; margin: 0 10px; text-align: center; color: #fff; background: url(../img/list_title_bg.png); background-size: 100% 100%;}
 .list { margin: 0 10px;}
 .item { background-color: transparent; border: 0; color: #ffffff; font-size: 15px; line-height: 20px;}
