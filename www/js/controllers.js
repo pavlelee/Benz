@@ -123,22 +123,11 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('DetailCtrl', function($scope, cartService, $ionicHistory) {
+.controller('DetailCtrl', function($scope, cartService) {
   console.log(cartService.cart);
   $scope.cart = cartService.cart;
-  
 
-  $scope.changeScale = function () {
-    $scope.insurance.first = Math.ceil($scope.cart.car.price * ($scope.insurance.scale/100));
-    $scope.insurance.per_month_pay = Math.ceil(($scope.cart.car.price - $scope.insurance.first)/36);
-  };
-
-  $scope.setInsurance = function () {
-    cartService.setInsurance($scope.insurance);
-
-    console.log(cartService.cart);
-    $ionicHistory.goBack();
-  }
+  cartService.reCalculate();
 })
 
 .controller('FinancialCtrl', function($scope, cartService, $ionicPopover, $ionicHistory) {

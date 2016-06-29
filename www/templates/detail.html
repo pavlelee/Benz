@@ -14,7 +14,7 @@
               </span>
             </div>
 
-            <div class="item">
+            <div class="item" ng-show="cart.schemesCount">
               <p>
                 经销商方案
                 <span class="item-note">
@@ -27,7 +27,7 @@
               </p>
             </div>
 
-            <div class="item">
+            <div class="item" ng-show="cart.giftsCount">
               <p>
                 精品升级
                 <span class="item-note">
@@ -45,42 +45,42 @@
             <div class="item">
               商业保险
               <span class="item-note">
-                10288
+                {{cart.shangye| currency}}
               </span>
             </div>
 
             <div class="item">
               交强险
               <span class="item-note">
-                32718
+                {{cart.jiaoqiang| currency}}
               </span>
             </div>
 
             <div class="item">
               购置税
               <span class="item-note">
-                800
+                {{cart.gouzhi| currency}}
               </span>
             </div>
 
             <div class="item">
               金融服务费
               <span class="item-note">
-                420
+                {{cart.service| currency}}
               </span>
             </div>
 
             <div class="item">
               车船使用税
               <span class="item-note">
-                950
+                {{cart.chechuan| currency}}
               </span>
             </div>
 
             <div class="item">
               上牌费
               <span class="item-note">
-                420
+                {{cart.shangpai| currency}}
               </span>
             </div>
 
@@ -91,21 +91,21 @@
               </span>
             </div>
 
-            <div class="item">
+            <div class="item" ng-show="cart.insurance.first">
               现金购车款
               <span class="item-note">
                 {{cart.insurance.first| currency}}
               </span>
             </div>
 
-            <div class="item">
+            <div class="item" ng-show="cart.insurance.per_month_pay">
               每月还款
               <span class="item-note">
                 {{cart.insurance.per_month_pay| currency}}
               </span>
             </div>
 
-            <div class="item">
+            <div class="item" ng-show="cart.insurance.month">
               还款期
               <span class="item-note">
                 {{cart.insurance.month}}
@@ -121,7 +121,15 @@
     <ion-tab title="保险明细">
       <ion-nav-view name="tab-tab1">
         <ion-content>
-          Tab 2 content
+
+          <div class="item" ng-repeat="value in cart.financial.items">
+            {{value.text}}  {{value.badge}}
+
+            <span class="item-note">
+              {{value.price| currency}}
+            </span>
+          </div>
+
         </ion-content>
 
       </ion-nav-view>
