@@ -138,7 +138,9 @@
           <div class="list list-striped">
             <div class="item item-complex" ng-repeat="value in cart.financial.items">
               <div class="item-main">
-                {{value.text}}  {{value.badge}}<span class="item-note">{{value.price| currency}}</span>
+                {{value.text}}
+                <span class="app-badge app-badge-default">{{value.badge}}</span>
+                <span class="item-note">{{value.price| currency}}</span>
               </div>
             </div>
           </div>
