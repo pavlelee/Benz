@@ -91,8 +91,8 @@ angular.module('starter.services', [])
     "allCount": 0,
     "preferential": "",
     "shangye": 1028800,
-    "jiaoqiang": 3271800,
-    "gouzhi": 80000,
+    "jiaoqiang": 80000,
+    "gouzhi": 3271800,
     "service": 42000,
     "chechuan": 95000,
     "shangpai": 42000
