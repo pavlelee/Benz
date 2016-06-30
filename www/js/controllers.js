@@ -32,8 +32,8 @@ angular.module('starter.controllers', [])
   $scope.cart = cartService.cart;
 
   $scope.list = {
-    1: {text: "延保两年", price: 600000, checked: true},
-    2: {text: "两年轮胎险", price: 188800, checked: false}
+    1: {text: "延保两年", price: 648800, checked: true},
+    2: {text: "两年轮胎险", price: 150000, checked: false}
   };
 
   angular.forEach($scope.list, function(value, key) {
@@ -66,8 +66,7 @@ angular.module('starter.controllers', [])
   $scope.cart = cartService.cart;
 
   $scope.list = {
-    1: {text: "3M 贴膜", price: 388800, checked: true},
-    2: {text: "凯立德地图导航", price: 300000, checked: false}
+    1: {text: "3M 贴膜", price: 380000, checked: true},
   };
 
   angular.forEach($scope.list, function(value, key) {

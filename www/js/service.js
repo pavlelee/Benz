@@ -34,13 +34,13 @@ angular.module('starter.services', [])
   this.cart = {
     "car": null,
     "schemes": {
-      1: {text: "延保两年", price: 600000, checked: true}
+      1: {text: "延保两年", price: 648800, checked: true}
     },
-    "schemesCount": 600000,
+    "schemesCount": 648800,
     "gifts": {
-      1: {text: "3M 贴膜", price: 388800, checked: true},
+      1: {text: "3M 贴膜", price: 380000, checked: true},
     },
-    "giftsCount": 388800,
+    "giftsCount": 380000,
     "insurance": null,
     "financial": {
       "name": "平安车险",
@@ -48,7 +48,7 @@ angular.module('starter.services', [])
         "1": {
           "text": "第三者责任险",
           "badge": "50万",
-          "price": "125200",
+          "price": "125200"
         },
         "2": {
           "text": "车辆损失险",
@@ -61,7 +61,7 @@ angular.module('starter.services', [])
         "4": {
           "text": "玻璃单独破损险",
           "price": "95700",
-          "badge": "进口",
+          "badge": "进口"
         },
         "5": {
           "text": "自然损失险",
@@ -82,7 +82,7 @@ angular.module('starter.services', [])
         "9": {
           "text": "车身划痕险",
           "price": "58500",
-          "badge": "2千",
+          "badge": "2千"
         }
       }
     },
