@@ -32,7 +32,7 @@
     "price": "38280000",
     "badge_price": "￥：38.28万",
     "exterior": "040黑色",
-    "exterior_color": "blue",
+    "exterior_color": "#000000",
     "interior": "105黑色",
     "interior_color": "#000000",
     "in_stock": 4,
