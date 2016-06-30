@@ -99,7 +99,7 @@
               </div>
             </div>
 
-            <div class="item item-complex item-last-sub" ng-show="cart.insurance.first">
+            <div class="item item-complex item-last-sub" ng-if="cart.insurance.scale != 100">
               <div class="item-main">
                 现金购车款
                 <div class="item-note">
@@ -108,7 +108,7 @@
               </div>
             </div>
 
-            <div class="item item-complex item-last-sub" ng-show="cart.insurance.per_month_pay">
+            <div class="item item-complex item-last-sub" ng-if="cart.insurance.scale != 100">
               <div class="item-main">
                 每月还款
                 <div class="item-note">
@@ -117,7 +117,7 @@
               </div>
             </div>
 
-            <div class="item item-complex item-last-sub" ng-show="cart.insurance.month">
+            <div class="item item-complex item-last-sub" ng-if="cart.insurance.scale != 100">
               <div class="item-main">
                 还款期
                 <div class="item-note">

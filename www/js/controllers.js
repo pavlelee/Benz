@@ -17,6 +17,17 @@ angular.module('starter.controllers', [])
   carService.car($stateParams.id).then(function (result) {
     cartService.setCar(result);
     $scope.item = cartService.cart;
+
+    var first = $scope.item.car.price * 0.5;
+    var per = Math.ceil(first/36);
+
+    cartService.setInsurance({
+      "first": first,
+      "month": 36,
+      "scale": 50,
+      "per_month_pay": per
+    });
+
     console.log($scope.item);
   }, function (error) {
     $rootScope.quickNotify(error);
