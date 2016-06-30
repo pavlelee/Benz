@@ -38,7 +38,7 @@ angular.module('starter.services', [])
     },
     "schemesCount": 648800,
     "gifts": {
-      1: {text: "3M Foil", price: 380000, checked: true}
+      1: {text: "3M Film", price: 380000, checked: true}
     },
     "giftsCount": 380000,
     "insurance": null,

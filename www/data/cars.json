@@ -18,7 +18,7 @@
     "name": "C200 Coupe",
     "price": "38810000",
     "badge_price": "￥：388.1K",
-    "exterior": "996锆石英红",
+    "exterior": "996锆石红",
     "exterior_color": "#880002",
     "interior": "105黑色",
     "interior_color": "#FFFFFF",
@@ -66,7 +66,7 @@
   },
   "6": {
     "id": "6",
-    "image": "/img/car/06.png",
+    "image": "/img/car/05.png",
     "name": "C200 Coupe",
     "price": "38280000",
     "badge_price": "￥：382.8K",

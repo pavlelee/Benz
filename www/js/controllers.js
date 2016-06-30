@@ -77,7 +77,7 @@ angular.module('starter.controllers', [])
   $scope.cart = cartService.cart;
 
   $scope.list = {
-    1: {text: "3M Foil", price: 380000, checked: true},
+    1: {text: "3M Film", price: 380000, checked: true},
   };
 
   angular.forEach($scope.list, function(value, key) {
