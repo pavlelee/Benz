@@ -88,6 +88,7 @@ angular.module('starter.services', [])
     },
     "financialCount": 1159600,
     "count": 0,
+    "allCount": 0,
     "preferential": "",
     "shangye": 1028800,
     "jiaoqiang": 3271800,
@@ -139,13 +140,20 @@ angular.module('starter.services', [])
    */
   this.reCalculate = function () {
     this.cart.count = 0;
+    this.cart.allCount = 0;
+
+    if(this.cart.car){
+      this.cart.allCount += parseInt(this.cart.car.price);
+    }
 
     if(this.cart.schemesCount){
       this.cart.count += parseInt(this.cart.schemesCount);
+      this.cart.allCount += parseInt(this.cart.schemesCount);
     }
 
     if(this.cart.giftsCount){
       this.cart.count += parseInt(this.cart.giftsCount);
+      this.cart.allCount += parseInt(this.cart.giftsCount);
     }
 
     if(this.cart.insurance){
@@ -154,6 +162,7 @@ angular.module('starter.services', [])
 
     if(this.cart.preferential){
       this.cart.count -= parseInt(this.cart.preferential) * 100;
+      this.cart.allCount -= parseInt(this.cart.preferential) * 100;
     }
 
     this.cart.count += parseInt(this.cart.shangye);
@@ -162,6 +171,13 @@ angular.module('starter.services', [])
     this.cart.count += parseInt(this.cart.service);
     this.cart.count += parseInt(this.cart.chechuan);
     this.cart.count += parseInt(this.cart.shangpai);
+
+    this.cart.allCount += parseInt(this.cart.shangye);
+    this.cart.allCount += parseInt(this.cart.jiaoqiang);
+    this.cart.allCount += parseInt(this.cart.gouzhi);
+    this.cart.allCount += parseInt(this.cart.service);
+    this.cart.allCount += parseInt(this.cart.chechuan);
+    this.cart.allCount += parseInt(this.cart.shangpai);
   };
 
   /**
