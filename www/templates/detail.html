@@ -22,7 +22,7 @@
                   {{cart.schemesCount| currency}}
                 </div>
               </div>
-              <div class="item-main clearfix" ng-repeat="value in cart.schemes">
+              <div class="item-main clearfix" ng-repeat="value in cart.schemes" ng-if="value">
                 <span class="item-note">
                   <div class="app-badge app-badge-default">{{value.text}}</div>
                   {{value.price| currency}}
@@ -34,7 +34,7 @@
               <div class="item-main">
                 精品升级<div class="item-note">{{cart.giftsCount| currency}}</div>
               </div>
-              <div class="item-main clearfix" ng-repeat="value in cart.gifts">
+              <div class="item-main clearfix" ng-repeat="value in cart.gifts" ng-if="value">
                 <span class="item-note" >
                   <div class="app-badge app-badge-default">{{value.text}}</div>
                   {{value.price| currency}}
