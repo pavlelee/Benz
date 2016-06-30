@@ -1,10 +1,13 @@
 <ion-popover-view>
-  <ion-header-bar>
-    <h1 class="title">{{title}}</h1>
-  </ion-header-bar>
-  <ion-content>
-    <ion-radio ng-value="'A'" ng-repeat="value in check.popover" ng-click="checkBadge(check, value)">
-      {{value.badge}} {{value.price| currency}}
-    </ion-radio>
+  <ion-content style="padding-top: 0px; margin: 0">
+    <div class="cells cells-access cells-checkbox">
+      <label class="cell" ng-repeat="value in check.popover">
+        <div class="cell-hd">
+          <input type="radio" class="app-check" ng-model="check.badge" ng-value="value.badge" ng-click="checkBadge(check, value)">
+          <i class="icon-checked"></i>
+        </div>
+        <div class="cell-bd cell-primary">{{value.badge}} {{value.price| currency}}</div>
+      </label>
+    </div>
   </ion-content>
 </ion-popover-view>
