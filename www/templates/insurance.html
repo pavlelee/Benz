@@ -1,12 +1,12 @@
 <ion-view>
   <ion-content>
 
-    <div class="list-head">3.99星时贷金融贷款方案</div>
+    <div class="list-head">3.99 Financing Option</div>
     <div class="list-head-sub">
-      <div class="parallelogram">3.99星时贷金融贷款方案</div>
+      <div class="parallelogram">3.99 Financing Option</div>
       <div class="content">
-        <span>利率:<dfn>3.99%</dfn></span>
-        <span>还款期:<dfn>36</dfn>个月</span>
+        <span>Interest Rate:  <dfn>3.99%</dfn></span>
+        <span>Term:  <dfn>36</dfn>months</span>
       </div>
     </div>
     <div class="list">
@@ -14,7 +14,7 @@
       <div class="item block-quote">
         <div class="block-quote-outer">
           <div class="block-quote-inner">
-            可贷款总价
+            Car Price
             <span class="item-note">{{cart.car.price| currency}}</span>
           </div>
         </div>
@@ -23,7 +23,7 @@
       <div class="item block-quote">
         <div class="block-quote-outer">
           <div class="block-quote-inner">
-            首付
+            Down Payment
             <span class="item-note">{{insurance.first| currency}}</span>
           </div>
           <div class="range">
@@ -36,7 +36,7 @@
       <div class="item block-quote">
         <div class="block-quote-outer">
           <div class="block-quote-inner">
-            每月还款
+            Monthly Payment
             <span class="item-note">{{insurance.per_month_pay| currency}}</span>
           </div>
         </div>
@@ -45,7 +45,7 @@
     </div>
 
     <div class="text-center margin-top-lg">
-      <button class="button button-app" ng-click="setInsurance()">确定</button>
+      <button class="button button-app" ng-click="setInsurance()">Submit</button>
     </div>
 
   </ion-content>

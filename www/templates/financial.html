@@ -14,15 +14,15 @@
     </div>
 
     <div class="cells cells-access cells-checkbox">
-      <div class="cell" ng-repeat="value in data.items">
+      <div class="cell" ng-repeat="(key, value) in data.items">
         <label class="cell-hd">
           <input type="checkbox" class="app-check" ng-model="value.checked" ng-change="checkItem()">
           <i class="icon-checked"></i>
         </label>
         <div class="cell-bd cell-primary">{{value.text}}</div>
 
-        <a class="cell-ft" ng-if="value.text == '第三者责任险' || value.text == '玻璃单独破损险' || value.text == '车身划痕险'" ng-click="openPopover($event, value)">{{value.price| currency}}</a>
-        <div class="cell-ft-no-icon" ng-if="!(value.text == '第三者责任险' || value.text == '玻璃单独破损险' || value.text == '车身划痕险')">{{value.price| currency}}</div>
+        <a class="cell-ft" ng-if="key == 1 || key == 4 || key == 9" ng-click="openPopover($event, value)">{{value.price| currency}}</a>
+        <div class="cell-ft-no-icon" ng-if="!(key == 1 || key == 4 || key == 9)">{{value.price| currency}}</div>
       </div>
     </div>
 

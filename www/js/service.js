@@ -34,55 +34,55 @@ angular.module('starter.services', [])
   this.cart = {
     "car": null,
     "schemes": {
-      1: {text: "延保两年", price: 648800, checked: true}
+      1: {text: "2 Year Extended Warranty", price: 648800, checked: true}
     },
     "schemesCount": 648800,
     "gifts": {
-      1: {text: "3M 贴膜", price: 380000, checked: true},
+      1: {text: "3M Foil", price: 380000, checked: true}
     },
     "giftsCount": 380000,
     "insurance": null,
     "financial": {
-      "name": "平安车险",
+      "name": "Ping An Auto Insurance",
       "items": {
         "1": {
-          "text": "第三者责任险",
-          "badge": "50万",
+          "text": "Third party liability insurance",
+          "badge": "500K",
           "price": "125200"
         },
         "2": {
-          "text": "车辆损失险",
+          "text": "Natural Disaster",
           "price": "462400"
         },
         "3": {
-          "text": "全车盗抢险",
+          "text": "Theft & Robbery",
           "price": "182700"
         },
         "4": {
-          "text": "玻璃单独破损险",
+          "text": "Window shield Damage",
           "price": "95700",
-          "badge": "进口"
+          "badge": "Imported Glass"
         },
         "5": {
-          "text": "自然损失险",
+          "text": "Spontaneous Combustion",
           "price": "57400"
         },
         "6": {
-          "text": "不计免赔特约险",
+          "text": "Waiver of Deductible",
           "price": "125100"
         },
         "7": {
-          "text": "无过责任险",
+          "text": "No Fault Liability",
           "price": "32600"
         },
         "8": {
-          "text": "车上人员责任险",
+          "text": "Passenger Seats",
           "price": "20000"
         },
         "9": {
-          "text": "车身划痕险",
+          "text": "Car body scratch",
           "price": "58500",
-          "badge": "2千"
+          "badge": "20K"
         }
       }
     },

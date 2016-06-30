@@ -1,63 +1,63 @@
 {
   "names": [
-    "平安车险",
+    "Ping An Auto Insurance",
     "太平洋车险"
   ],
   "items": {
     "1": {
-      "text": "第三者责任险",
-      "badge": "50万",
+      "text": "Third party liability insurance",
+      "badge": "500K",
       "price": "125200",
       "popover": [
-        {"badge": "5万", "price": 51600},
-        {"badge": "10万", "price": 74600},
-        {"badge": "20万", "price": 92400},
-        {"badge": "50万", "price": 125200},
-        {"badge": "100万", "price": 163000}
+        {"badge": "50K", "price": 51600},
+        {"badge": "100K", "price": 74600},
+        {"badge": "200K", "price": 92400},
+        {"badge": "500K", "price": 125200},
+        {"badge": "1000K", "price": 163000}
       ]
     },
     "2": {
-      "text": "车辆损失险",
+      "text": "Natural Disaster",
       "price": "462400"
     },
     "3": {
-      "text": "全车盗抢险",
+      "text": "Theft & Robbery",
       "price": "182700"
     },
     "4": {
-      "text": "玻璃单独破损险",
+      "text": "Window shield Damage",
       "price": "95700",
-      "badge": "进口",
+      "badge": "Inlet",
       "popover": [
-        {"badge": "国产", "price": 57400},
-        {"badge": "进口", "price": 95700}
+        {"badge": "Domestic Glass", "price": 57400},
+        {"badge": "Imported Glass", "price": 95700}
       ]
     },
     "5": {
-      "text": "自然损失险",
+      "text": "Spontaneous Combustion",
       "price": "57400"
     },
     "6": {
-      "text": "不计免赔特约险",
+      "text": "Waiver of Deductible",
       "price": "125100"
     },
     "7": {
-      "text": "无过责任险",
+      "text": "No Fault Liability",
       "price": "32600"
     },
     "8": {
-      "text": "车上人员责任险",
+      "text": "Passenger Seats",
       "price": "20000"
     },
     "9": {
-      "text": "车身划痕险",
+      "text": "Car body scratch",
       "price": "58500",
-      "badge": "2千",
+      "badge": "2K",
       "popover": [
-        {"badge": "2千", "price": 58500},
-        {"badge": "5千", "price": 90000},
-        {"badge": "1万", "price": 117000},
-        {"badge": "2万", "price": 178000}
+        {"badge": "2K", "price": 58500},
+        {"badge": "5K", "price": 90000},
+        {"badge": "10K", "price": 117000},
+        {"badge": "20K", "price": 178000}
       ]
     }
   }
