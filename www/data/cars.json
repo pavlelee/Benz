@@ -21,7 +21,7 @@
     "exterior": "996锆石红",
     "exterior_color": "#880002",
     "interior": "105黑色",
-    "interior_color": "#FFFFFF",
+    "interior_color": "#000000",
     "in_stock": 1,
     "on_stock": 1
   },
@@ -47,7 +47,7 @@
     "exterior": "775铱银色",
     "exterior_color": "#A1A9AC",
     "interior": "105黑色",
-    "interior_color": "#FFFFFF",
+    "interior_color": "#000000",
     "in_stock": 5,
     "on_stock": 1
   },
