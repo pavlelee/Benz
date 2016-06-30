@@ -2,7 +2,7 @@
   "1": {
     "id": "1",
     "image": "/img/car/01.png",
-    "name": "C200 Sport",
+    "name": "C200 Coupe",
     "price": "39280000",
     "badge_price": "￥：392.8K",
     "exterior": "799钻石白",
@@ -15,7 +15,7 @@
   "2": {
     "id": "2",
     "image": "/img/car/02.png",
-    "name": "C200 Sport",
+    "name": "C200 Coupe",
     "price": "38810000",
     "badge_price": "￥：388.1K",
     "exterior": "996锆石英红",
@@ -28,7 +28,7 @@
   "3": {
     "id": "3",
     "image": "/img/car/03.png",
-    "name": "C200 Sport",
+    "name": "C200 Coupe",
     "price": "38280000",
     "badge_price": "￥：382.8K",
     "exterior": "040黑色",
@@ -41,7 +41,7 @@
   "4": {
     "id": "4",
     "image": "/img/car/04.png",
-    "name": "C200 Sport",
+    "name": "C200 Coupe",
     "price": "38280000",
     "badge_price": "￥：382.8K",
     "exterior": "775铱银色",
@@ -54,7 +54,7 @@
   "5": {
     "id": "5",
     "image": "/img/car/05.png",
-    "name": "C200 Sport",
+    "name": "C200 Coupe",
     "price": "38280000",
     "badge_price": "￥：382.8K",
     "exterior": "890水硅钒",
@@ -67,7 +67,7 @@
   "6": {
     "id": "6",
     "image": "/img/car/06.png",
-    "name": "C200 Sport",
+    "name": "C200 Coupe",
     "price": "38280000",
     "badge_price": "￥：382.8K",
     "exterior": "890水硅钒",
@@ -80,7 +80,7 @@
   "7": {
     "id": "7",
     "image": "/img/car/05.png",
-    "name": "C200 Sport",
+    "name": "C200 Coupe",
     "price": "38280000",
     "badge_price": "￥：382.8K",
     "exterior": "890水硅钒",
