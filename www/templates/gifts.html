@@ -17,7 +17,9 @@
                   <i class="icon-checked"></i>
                 </div>
                 <div class="cell-bd cell-primary">{{item.text}} </div>
-                <div class="cell-hd">{{item.price| currency}}</div>
+                <div class="cell-hd">
+                  <numb>{{item.price| currency}}</numb>
+                </div>
               </label>
 
             </div>
@@ -27,7 +29,7 @@
 
     </div>
     <div class="list-footer">
-      Total：{{cart.giftsCount| currency}}
+      Total：<numb>{{cart.giftsCount| currency}}</numb>
     </div>
 
     <div class="text-center margin-top-xl">

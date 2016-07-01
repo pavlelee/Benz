@@ -10,7 +10,7 @@
               <div class="item-main">
                 Stock Vehicle
                 <div class="item-note">
-                  {{cart.car.price| currency}}
+                  <numb>{{cart.car.price| currency}}</numb>
                 </div>
               </div>
             </div>
@@ -19,39 +19,47 @@
               <div class="item-main">
                 Dealer Options
                 <div class="item-note">
-                  {{cart.schemesCount| currency}}
+                  <numb>{{cart.schemesCount| currency}}</numb>
                 </div>
               </div>
               <div class="item-main clearfix" ng-repeat="value in cart.schemes" ng-if="value">
                 <span class="item-note">
                   <div class="app-badge app-badge-default">{{value.text}}</div>
-                  {{value.price| currency}}
+                  <numb>{{value.price| currency}}</numb>
                 </span>
               </div>
             </div>
 
             <div class="item item-complex" ng-if="cart.giftsCount">
               <div class="item-main">
-                Accessories<div class="item-note">{{cart.giftsCount| currency}}</div>
+                Accessories
+                <div class="item-note">
+                  <numb>{{cart.giftsCount| currency}}</numb>
+                </div>
               </div>
               <div class="item-main clearfix" ng-repeat="value in cart.gifts" ng-if="value">
                 <span class="item-note" >
                   <div class="app-badge app-badge-default">{{value.text}}</div>
-                  {{value.price| currency}}
+                  <numb>{{value.price| currency}}</numb>
                 </span>
               </div>
             </div>
 
             <div class="item item-complex">
               <div class="item-main">
-                Commercial Insurance<div class="item-note">{{cart.shangye| currency}}</div>
+                Commercial Insurance
+                <div class="item-note">
+                  <numb>{{cart.shangye| currency}}</numb>
+                </div>
               </div>
             </div>
 
             <div class="item item-complex">
               <div class="item-main">
                 Compulsory Traffic Accident Liability
-                <div class="item-note">{{cart.jiaoqiang| currency}}</div>
+                <div class="item-note">
+                  <numb>{{cart.jiaoqiang| currency}}</numb>
+                </div>
               </div>
             </div>
 
@@ -59,7 +67,7 @@
               <div class="item-main">
                 Vehicle Purchase Tax
                 <div class="item-note">
-                  {{cart.gouzhi| currency}}
+                  <numb>{{cart.gouzhi| currency}}</numb>
                 </div>
               </div>
             </div>
@@ -68,7 +76,7 @@
               <div class="item-main">
                 Financing Service Charge
                 <div class="item-note">
-                  {{cart.service| currency}}
+                  <numb>{{cart.service| currency}}</numb>
                 </div>
               </div>
             </div>
@@ -77,7 +85,7 @@
               <div class="item-main">
                 Vehicle & Vessel Use Tax
                 <div class="item-note">
-                  {{cart.chechuan| currency}}
+                  <numb>{{cart.chechuan| currency}}</numb>
                 </div>
               </div>
             </div>
@@ -86,7 +94,7 @@
               <div class="item-main">
                 License Fee
                 <div class="item-note">
-                  {{cart.shangpai| currency}}
+                  <numb>{{cart.shangpai| currency}}</numb>
                 </div>
               </div>
             </div>
@@ -95,7 +103,7 @@
               <div class="item-main">
                 Total Price
                 <div class="item-note">
-                  {{cart.allCount| currency}}
+                  <numb>{{cart.allCount| currency}}</numb>
                 </div>
               </div>
             </div>
@@ -104,7 +112,7 @@
               <div class="item-main">
                 Total Price （Cash Portion）
                 <div class="item-note">
-                  {{cart.count| currency}}
+                  <numb>{{cart.count| currency}}</numb>
                 </div>
               </div>
             </div>
@@ -113,7 +121,7 @@
               <div class="item-main">
                 Monthly Payment
                 <div class="item-note">
-                  {{cart.insurance.per_month_pay| currency}}
+                  <numb>{{cart.insurance.per_month_pay| currency}}</numb>
                 </div>
               </div>
             </div>
@@ -122,7 +130,7 @@
               <div class="item-main">
                 Term
                 <div class="item-note">
-                  {{cart.insurance.month}} months
+                  <numb>{{cart.insurance.month}}</numb> months
                 </div>
               </div>
             </div>
@@ -141,7 +149,9 @@
               <div class="item-main">
                 {{value.text}}
                 <span class="app-badge app-badge-default">{{value.badge}}</span>
-                <span class="item-note">{{value.price| currency}}</span>
+                <span class="item-note">
+                  <numb>{{value.price| currency}}</numb>
+                </span>
               </div>
             </div>
           </div>

@@ -5,8 +5,8 @@
     <div class="list-head-sub">
       <div class="parallelogram">3.99 Financing Option</div>
       <div class="content">
-        <span>Interest Rate:  <dfn>3.99%</dfn></span>
-        <span>Term:  <dfn>36</dfn>months</span>
+        <span>Interest Rate:  <numb>3.99%</numb></span>
+        <span>Term:  <numb>36</numb>months</span>
       </div>
     </div>
     <div class="list">
@@ -15,7 +15,9 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             Car Price
-            <span class="item-note">{{cart.car.price| currency}}</span>
+            <span class="item-note">
+              <numb>{{cart.car.price| currency}}</numb>
+            </span>
           </div>
         </div>
       </div>
@@ -24,11 +26,13 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             Down Payment
-            <span class="item-note">{{insurance.first| currency}}</span>
+            <span class="item-note">
+              <numb>{{insurance.first| currency}}</numb>
+            </span>
           </div>
           <div class="range">
             <input type="range" name="volume" ng-model="insurance.scale" min="50" max="100" ng-change="changeScale()">
-            {{insurance.scale}}%
+            <numb>{{insurance.scale}}%</numb>
           </div>
         </div>
       </div>
@@ -37,7 +41,9 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             Monthly Payment
-            <span class="item-note">{{insurance.per_month_pay| currency}}</span>
+            <span class="item-note">
+              <numb>{{insurance.per_month_pay| currency}}</numb>
+            </span>
           </div>
         </div>
       </div>

@@ -21,14 +21,18 @@
         </label>
         <div class="cell-bd cell-primary">{{value.text}}</div>
 
-        <a class="cell-ft" ng-if="key == 1 || key == 4 || key == 9" ng-click="openPopover($event, value)">{{value.price| currency}}</a>
-        <div class="cell-ft-no-icon" ng-if="!(key == 1 || key == 4 || key == 9)">{{value.price| currency}}</div>
+        <a class="cell-ft" ng-if="key == 1 || key == 4 || key == 9" ng-click="openPopover($event, value)">
+          <numb>{{value.price| currency}}</numb>
+        </a>
+        <div class="cell-ft-no-icon" ng-if="!(key == 1 || key == 4 || key == 9)">
+          <numb>{{value.price| currency}}</numb>
+        </div>
       </div>
     </div>
 
   </ion-content>
   <div class="fixed-bottom">
-    <div class="bottom-main">Total: {{cart.financialCount| currency}}</div>
+    <div class="bottom-main">Total: <numb>{{cart.financialCount| currency}}</numb></div>
     <button class="button button-app" type="button" ng-click="goBack()">Submit</button>
   </div>
 </ion-view>
