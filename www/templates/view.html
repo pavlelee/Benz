@@ -27,7 +27,7 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             裸车价
-            <span class="item-note">{{item.car.price| currency}}</span>
+            <numb class="item-note">{{item.car.price| currency}}</numb>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             经销商方案
-            <span class="item-note" ng-show="item.schemesCount">{{item.schemesCount| currency}}</span>
+            <numb class="item-note" ng-show="item.schemesCount">{{item.schemesCount| currency}}</numb>
           </div>
           <div class="block-quote-footer" ng-show="item.schemesCount">
             <div class="app-badge app-badge-default" ng-repeat="value in item.schemes">
@@ -50,7 +50,7 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             精品升级
-            <span class="item-note" ng-show="item.giftsCount">{{item.giftsCount| currency}}</span>
+            <numb class="item-note" ng-show="item.giftsCount">{{item.giftsCount| currency}}</numb>
           </div>
           <div class="block-quote-footer" ng-show="item.giftsCount">
             <div class="app-badge app-badge-default" ng-repeat="value in item.gifts">
@@ -64,7 +64,9 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             商业保险
-            <span class="item-note" ng-show="item.financialCount">{{item.financial.name}} {{item.financialCount| currency}}</span>
+            <numb class="item-note" ng-show="item.financialCount">
+              {{item.financial.name}} {{item.financialCount| currency}}
+            </numb>
           </div>
         </div>
       </a>
@@ -73,8 +75,8 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             金融方案
-            <span class="item-note" ng-show="item.insurance">月供：{{item.insurance.per_month_pay| currency}}</span>
-            <span class="item-note" ng-show="item.insurance">首付：{{item.insurance.first| currency}}</span>
+            <span class="item-note" ng-show="item.insurance">月供：<numb>{{item.insurance.per_month_pay| currency}}</numb></span>
+            <span class="item-note" ng-show="item.insurance">首付：<numb>{{item.insurance.first| currency}}</numb></span>
           </div>
         </div>
       </a>

@@ -12,12 +12,20 @@
             <div class="cells-checkbox">
 
               <label class="cell" ng-repeat="item in list">
+
                 <div class="cell-hd">
                   <input type="checkbox" class="app-check" ng-model="item.checked" ng-change="addGifts()">
                   <i class="icon-checked"></i>
                 </div>
-                <div class="cell-bd cell-primary">{{item.text}} </div>
-                <div class="cell-hd">{{item.price| currency}}</div>
+
+                <div class="cell-bd cell-primary">
+                  {{item.text}}
+                </div>
+
+                <div class="cell-hd">
+                  <numb>{{item.price| currency}}</numb>
+                </div>
+
               </label>
 
             </div>
@@ -27,7 +35,7 @@
 
     </div>
     <div class="list-footer">
-      小计：{{cart.giftsCount| currency}}
+      小计：<numb>{{cart.giftsCount| currency}}</numb>
     </div>
 
     <div class="text-center margin-top-xl">

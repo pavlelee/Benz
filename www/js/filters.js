@@ -20,6 +20,6 @@ angular.module('starter.filters', [])
     }
 
     s = s.replace(/(\d*),(\d\d)$/, "$1");
-    return '¥' + s.replace(/^\./, "0.");
+    return '¥ ' + s.replace(/^\./, "0.");
   };
 }]);

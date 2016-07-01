@@ -5,8 +5,8 @@
     <div class="list-head-sub">
       <div class="parallelogram">3.99星时贷金融贷款方案</div>
       <div class="content">
-        <span>利率:<dfn>3.99%</dfn></span>
-        <span>还款期:<dfn>36</dfn>个月</span>
+        <span>利率:<numb>3.99%</numb></span>
+        <span>还款期:<numb>36</numb>个月</span>
       </div>
     </div>
     <div class="list">
@@ -15,7 +15,7 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             可贷款总价
-            <span class="item-note">{{cart.car.price| currency}}</span>
+            <numb class="item-note">{{cart.car.price| currency}}</numb>
           </div>
         </div>
       </div>
@@ -24,11 +24,11 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             首付
-            <span class="item-note">{{insurance.first| currency}}</span>
+            <numb class="item-note">{{insurance.first| currency}}</numb>
           </div>
           <div class="range">
             <input type="range" name="volume" ng-model="insurance.scale" min="50" max="100" ng-change="changeScale()">
-            {{insurance.scale}}%
+            <numb>{{insurance.scale}}%</numb>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             每月还款
-            <span class="item-note">{{insurance.per_month_pay| currency}}</span>
+            <numb class="item-note">{{insurance.per_month_pay| currency}}</numb>
           </div>
         </div>
       </div>
