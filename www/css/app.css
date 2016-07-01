@@ -102,7 +102,7 @@ div.item-note { color: #ffffff;}
 .block-quote-inner { position: relative; padding: 8px 14px; font-size: 15px; color: #ffffff;}
 .block-quote-inner .item-note { color: #999999;}
 .block-quote-inner .item-note + .item-note { margin-right: 15px;}
-.block-quote-inner .app-input { padding: 0; width: 80px; height: auto; line-height: 1; text-align: right; background: transparent; color: inherit; font-size: 15px;}
+.block-quote-inner .app-input { padding: 0; width: 100px; height: auto; line-height: 1; text-align: right; background: transparent; color: inherit; font-size: 15px;}
 .block-quote-footer { text-align: right; line-height: 1; padding: 8px 14px;}
 .block-quote-inner + .block-quote-footer { padding-top: 0;}
 .block-quote-access { margin-bottom: 25px;}

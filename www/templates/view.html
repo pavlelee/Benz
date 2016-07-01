@@ -27,7 +27,9 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             Stock Vehicle
-            <span class="item-note">{{item.car.price| currency}}</span>
+            <span class="item-note">
+              <numb>{{item.car.price| currency}}</numb>
+            </span>
           </div>
         </div>
       </div>
@@ -36,7 +38,9 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             Dealer Options
-            <span class="item-note" ng-show="item.schemesCount">{{item.schemesCount| currency}}</span>
+            <span class="item-note" ng-show="item.schemesCount">
+              <numb>{{item.schemesCount| currency}}</numb>
+            </span>
           </div>
           <div class="block-quote-footer" ng-show="item.schemesCount">
             <div class="app-badge app-badge-default" ng-repeat="value in item.schemes">
@@ -50,7 +54,9 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             Accessories
-            <span class="item-note" ng-show="item.giftsCount">{{item.giftsCount| currency}}</span>
+            <span class="item-note" ng-show="item.giftsCount">
+              <numb>{{item.giftsCount| currency}}</numb>
+            </span>
           </div>
           <div class="block-quote-footer" ng-if="item.giftsCount">
             <div class="app-badge app-badge-default" ng-repeat="value in item.gifts">
@@ -64,7 +70,10 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             Insurance
-            <span class="item-note" ng-if="item.financialCount">{{item.financial.name}} {{item.financialCount| currency}}</span>
+            <span class="item-note" ng-if="item.financialCount">
+              {{item.financial.name}}
+              <numb>{{item.financialCount| currency}}</numb>
+            </span>
           </div>
         </div>
       </a>
@@ -73,8 +82,8 @@
         <div class="block-quote-outer">
           <div class="block-quote-inner">
             Financing
-            <span class="item-note" ng-if="item.insurance">month：{{item.insurance.per_month_pay| currency}}</span>
-            <span class="item-note" ng-if="item.insurance">Pay：{{item.insurance.first| currency}}</span>
+            <span class="item-note" ng-if="item.insurance">month：<numb>{{item.insurance.per_month_pay| currency}}</numb></span>
+            <span class="item-note" ng-if="item.insurance">Pay：<numb>{{item.insurance.first| currency}}</numb></span>
           </div>
         </div>
       </a>
